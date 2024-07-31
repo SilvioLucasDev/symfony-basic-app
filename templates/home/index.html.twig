@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<div class="w-full">
+    <h1 class="my-10 pb-2 text-4xl border-b border-gray-400">Postagens Recentes! ✅</h1>
+
+    <div class="w-full">
+        {% for post in posts %}
+            <div class="border-b border-gray-400 mb-5 pb-2">
+                <h2 class="text-2xl font-bold">
+                    {{ post.title }}
+                </h2>
+                <a href="{{ path('app_show', { slug: post.slug }) }}" class="font-bold text-blue-600 hover:underline">Ler Agora...</a>
+            </div>
+
+            {% else %}
+                <h3>Nenhuma postagem encontrada!</h3>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
