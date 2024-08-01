@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'app_index', methods: ['GET'])]
+    #[Route('/', name: 'home_index', methods: ['GET'])]
     public function index(): Response
     {
         $posts = $this->getPosts();
@@ -17,7 +17,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/post/{slug?}', name: 'app_show', methods: ['GET'])]
+    #[Route('/post/{slug?}', name: 'home_show', methods: ['GET'])]
     public function show(string $slug = null): Response
     {
         $posts = $this->getPosts();
