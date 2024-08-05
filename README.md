@@ -1,3 +1,3 @@
 # symfony-basic-app
 
-Aplicação básica em Symfony para estudos.
+Aplicação simples em PHP com Symfony para estudos.
